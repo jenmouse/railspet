@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   resources :pets do
     resources :foods
+    resources :exercises
   end
 end

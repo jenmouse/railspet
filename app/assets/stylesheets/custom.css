@@ -1,0 +1,49 @@
+body{
+    text-decoration: none;
+    font-family:railway;
+    text-align:center;
+    background:gray;
+    }
+    
+h1{
+    color: green;
+    font-family: georgia !important;
+    text-align: center;
+    display:block;
+    background-color:lightblue;
+    border-radius:30px;
+    text-decoration: none;
+}
+
+table {
+    font-family:garamond;
+    font-size:16pt;
+    text-decoration: none;
+    padding: 20px;
+    color:gray;
+}
+table th{
+    background-color:lightblue;
+    font-size:16pt;
+    color:black;
+    text-align: center;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+table th:first-child,table th.transparent{
+    background-color: transparent;
+}
+
+
+
+table tbody td{
+    background-color:lightgreen;
+    border-radius: 30px;
+    border: 2px solid white;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}

@@ -1,0 +1,30 @@
+<h1>New Excercise</h1>
+    <%= form_for([@pet, @exercise]) do |f| %>
+        <% if @exercise.errors.any? %>
+        <div id="error_explanation">
+            <h2><%= pluralize(@exercise.errors.count,"error") %> prohibited this exercise from being saved</h2>
+            
+            <ul>
+                <% @exercise.errors.full_messages.each. do |msg| %>
+                <li><%= msg %> </li>
+            </ul>
+        </div>
+        <% end %>
+        
+        <div class="field">
+            <%= f.label :name %><br>
+            <%= f.text_field :name %>
+        </div>
+    
+        <div class="field">
+            <%= f.label :calories %> <br>
+            <%= f.number_field :calories %>
+        </div>
+        
+        <div class= "actions">
+            <%= f.submit %>
+        </div>
+    <% end %>
+    
+    <%= link_to 'Back', pet_path(@pet) %>
+        

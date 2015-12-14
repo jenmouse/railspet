@@ -1,0 +1,30 @@
+<h1>New Food</h1>
+    <%= form_for([@pet, @food]) do |f| %>
+        <% if @food.errors.any? %>
+        <div id="error_explanation">
+            <h2><%= pluralize(@food.errors.count,"error") %> prohibited this food from being saved</h2>
+            
+            <ul>
+                <% @food.errors.full_messages.each. do |msg| %>
+                <li><%= msg %> </li>
+            </ul>
+        </div>
+        <% end %>
+        
+        <div class="field">
+            <%= f.label :name %><br>
+            <%= f.text_field :name %>
+        </div>
+    
+        <div class="field">
+            <%= f.label :calories %> <br>
+            <%= f.number_field :calories %>
+        </div>
+        
+        <div class= "actions">
+            <%= f.submit %>
+        </div>
+    <% end %>
+    
+    <%= link_to 'Back', pet_path(@pet) %>
+        

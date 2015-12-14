@@ -23,6 +23,11 @@
 </p>
 
 <p>
+  <strong>Excercises done:</strong>
+  <%= @pet.exercises_done %>
+</p>
+
+<p>
   <strong>Pet full score:</strong>
   <%= @pet.food_score %>% full
 </p>
@@ -30,3 +35,4 @@
 <%= link_to 'Edit', edit_pet_path(@pet) %> |
 <%= link_to 'Back', pets_path %> |
 <%= link_to 'Feed your pet', new_pet_food_path(@pet, @food) %>
+<%= link_to 'Excercise your pet', new_pet_exercise_path(@pet, @exercise) %>
